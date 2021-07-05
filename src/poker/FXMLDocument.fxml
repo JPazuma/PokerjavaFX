@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #0E1015;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poker.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1035.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/poker.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="500.0" layoutY="20.0" opacity="0.92" prefHeight="560.0" prefWidth="480.0" style="-fx-background-color: #0E1015;">
+         <children>
+            <Button fx:id="buttonSair" alignment="CENTER" layoutX="392.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#handleClose" prefHeight="23.0" prefWidth="74.0" style="-fx-background-color: #DB4B29;" text="Sair" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelTitulo" layoutX="156.0" layoutY="75.0" text="Partida" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="49.0" />
+               </font>
+            </Label>
+            <Button fx:id="butttonCriarSala" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="243.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="208.0" style="-fx-background-color: #DB4B29;" text="Criar Sala" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtFieldNomeSala" alignment="CENTER" layoutX="101.0" layoutY="148.0" prefHeight="33.0" prefWidth="272.0" promptText="Nome da sala">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtFieldValorSala" alignment="CENTER" layoutX="101.0" layoutY="194.0" prefHeight="33.0" prefWidth="272.0" promptText="Valor da sala">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </TextField>
+            <ListView layoutX="99.0" layoutY="363.0" prefHeight="109.0" prefWidth="280.0" />
+            <Label fx:id="labelTitulo1" layoutX="172.0" layoutY="306.0" text="Salas" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="49.0" />
+               </font>
+            </Label>
+            <Button fx:id="butttonEntrarSala" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="480.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="208.0" style="-fx-background-color: #DB4B29;" text="Entrar na Sala" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="20.0" layoutY="20.0" opacity="0.92" prefHeight="560.0" prefWidth="480.0" style="-fx-background-color: #0E1015;">
+         <children>
+            <Label layoutX="179.0" layoutY="194.0" text="Poker" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="44.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFieldUtilizador" alignment="CENTER" layoutX="104.0" layoutY="268.0" prefHeight="33.0" prefWidth="272.0" promptText="Utilizador">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtFieldCreditos" alignment="CENTER" layoutX="104.0" layoutY="322.0" prefHeight="33.0" prefWidth="272.0" promptText="19500€">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
