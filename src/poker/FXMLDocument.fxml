@@ -49,7 +49,7 @@
                   <Font name="Arial Bold" size="49.0" />
                </font>
             </Label>
-            <Button fx:id="butttonEntrarSala" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="480.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="208.0" style="-fx-background-color: #DB4B29;" text="Entrar na Sala" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="butttonEntrarSala" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="480.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="23.0" prefWidth="208.0" style="-fx-background-color: #DB4B29;" text="Entrar na Sala" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="23.0" />
                </font>

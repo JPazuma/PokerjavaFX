@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #0E1015;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poker.MesaJogoController">
+   <children>
+      <ImageView fitHeight="396.0" fitWidth="699.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="152.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.43927001953125" AnchorPane.topAnchor="52.0">
+         <image>
+            <Image url="@images/mesa.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="600.0" prefWidth="500.0">
+         <children>
+            <ImageView fx:id="imgPlayer1" fitHeight="101.0" fitWidth="99.0" layoutX="48.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/player.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblPlayer1Name" layoutX="53.0" layoutY="232.0" text="Player1" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Label>
+            <VBox layoutX="16.0" layoutY="430.0" prefHeight="170.0" prefWidth="468.0">
+               <children>
+                  <Text fill="#db4b29" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat" textAlignment="CENTER" wrappingWidth="467.6708984375">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="outputChatText" prefHeight="102.0" prefWidth="468.0" style="-fx-background-color: #f4d9ff;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextArea>
+                  <TextField fx:id="inputChatText" prefHeight="33.0" prefWidth="451.0" promptText="Inserir texto aqui" style="-fx-background-color: #f8e8ff;" />
+               </children>
+            </VBox>
+            <ImageView fx:id="p1Carta1" fitHeight="80.0" fitWidth="50.0" layoutX="44.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/c1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="p1Carta2" fitHeight="80.0" fitWidth="50.0" layoutX="98.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/d2.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblPlayer1Cred" layoutX="44.0" layoutY="258.0" text="Creditos- xxx" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="cartaMesa2" fitHeight="120.0" fitWidth="85.0" layoutX="361.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cartaMesa1" fitHeight="120.0" fitWidth="85.0" layoutX="266.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backv.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblapostaP1" layoutX="26.0" layoutY="359.0" text="Aposta atual - xxx" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="498.0" prefHeight="600.0" prefWidth="500.0">
+         <children>
+            <Label fx:id="lblPlayer2Name" layoutX="366.0" layoutY="230.0" text="Player2" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgPlayer2" fitHeight="101.0" fitWidth="99.0" layoutX="357.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/player.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnSair" layoutX="407.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#handleClose" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #DB4B29;" text="Sair" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="14.0" layoutY="458.0" prefHeight="136.0" prefWidth="468.0">
+               <children>
+                  <Button fx:id="btnFoldP2" layoutX="25.0" layoutY="86.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #DB4B29;" text="Fold" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnRaise" layoutX="175.0" layoutY="86.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #DB4B29;" text="Raise" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCheck" layoutX="324.0" layoutY="86.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #DB4B29;" text="Check" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="inpRaise" alignment="CENTER" layoutX="46.0" layoutY="28.0" prefHeight="40.0" prefWidth="88.0" promptText="Value">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </TextField>
+                  <Slider fx:id="sldValue" layoutX="175.0" layoutY="34.0" prefHeight="28.0" prefWidth="280.0" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="lblPlayer2Cred" layoutX="357.0" layoutY="256.0" text="Creditos- xxx" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="cartaMesa3" fitHeight="120.0" fitWidth="85.0" layoutX="-40.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cartaMesa4" fitHeight="120.0" fitWidth="85.0" layoutX="56.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cartaMesa5" fitHeight="120.0" fitWidth="85.0" layoutX="153.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="p2Carta2" fitHeight="80.0" fitWidth="50.0" layoutX="407.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="p2Carta1" fitHeight="80.0" fitWidth="50.0" layoutX="353.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backv.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="-103.0" layoutY="346.0" text="Valor da mesa - xxx" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblapostaP2" layoutX="335.0" layoutY="361.0" text="Aposta atual - xxx" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
